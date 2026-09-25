@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta -->
+  <title>YugenK — Supercar Drawings</title>
+  <meta name="description" content="Original supercar drawings by YugenK — a young artist capturing the soul of speed with pencil, ink, and colored pencil." />
+
+  <!-- OGP -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="YugenK — Supercar Drawings" />
+  <meta property="og:description" content="Original supercar drawings by a young artist. Pencil, ink, and colored pencil." />
+  <meta property="og:image"       content="images/ogp.jpg" />
+  <meta property="og:url"         content="" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <meta name="twitter:title"      content="YugenK — Supercar Drawings" />
+  <meta name="twitter:description"content="Original supercar drawings by a young artist." />
+  <meta name="twitter:image"      content="images/ogp.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Instrument+Serif:ital@1&family=Inter:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+
+  <!-- QR Code library -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══ LANGUAGE TOGGLE (fixed) ═══ -->
+  <div id="lang-toggle" aria-label="Language selector">
+    <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+    <span aria-hidden="true">·</span>
+    <button class="lang-btn" data-lang="ja" aria-pressed="false">日本語</button>
+  </div>
+
+  <!-- ═══ NAV ═══ -->
+  <header id="site-nav" role="banner">
+    <nav class="nav-inner" aria-label="Site navigation">
+      <a href="#hero" class="nav-logo" aria-label="YugenK — top">YugenK</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#works"       data-i18n="nav_works">Works</a></li>
+        <li><a href="#recognition" data-i18n="nav_recognition">Recognition</a></li>
+        <li><a href="#artist"      data-i18n="nav_artist">The Artist</a></li>
+        <li><a href="#support"     data-i18n="nav_support">Support</a></li>
+        <li><a href="#connect"     data-i18n="nav_connect">Connect</a></li>
+      </ul>
+      <a href="https://www.instagram.com/yugenk_art/" target="_blank" rel="noopener noreferrer" class="nav-ig" aria-label="Instagram">
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+      </a>
+    </nav>
+  </header>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-img-wrap">
+      <img src="images/drawing_porsche_mission_r_new.jpg" alt="Porsche Mission R — colored pencil drawing by YugenK" fetchpriority="high" />
+      <div class="hero-overlay" aria-hidden="true"></div>
+    </div>
+    <div class="hero-body">
+      <p class="hero-label" data-i18n="hero_label">Supercar Drawings / Since age 7</p>
+      <h1 class="hero-title">YugenK</h1>
+      <p class="hero-statement" data-i18n="hero_statement">Machines, drawn by hand.</p>
+      <div class="hero-ctas">
+        <a href="#works" class="btn-primary" data-i18n="hero_cta_works">View Works</a>
+        <a href="https://www.instagram.com/yugenk_art/" target="_blank" rel="noopener noreferrer" class="btn-ig">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+          <span data-i18n="hero_cta_ig">Follow on Instagram</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WORKS ═══ -->
+  <section id="works" class="section-pad" aria-labelledby="works-heading">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label" data-i18n="works_label">Works</span>
+        <h2 id="works-heading" class="section-title" data-i18n="works_title">Selected Drawings</h2>
+      </div>
+
+      <!-- Filter -->
+      <div class="works-filter fade-up" role="tablist" aria-label="Filter">
+        <button class="filter-btn active" data-filter="all"    role="tab" aria-selected="true"  data-i18n="filter_all">All</button>
+        <button class="filter-btn"        data-filter="pencil" role="tab" aria-selected="false" data-i18n="filter_pencil">Pencil / Ink</button>
+        <button class="filter-btn"        data-filter="color"  role="tab" aria-selected="false" data-i18n="filter_color">Color</button>
+        <button class="filter-btn"        data-filter="travel" role="tab" aria-selected="false" data-i18n="filter_travel">Moments</button>
+      </div>
+
+      <!-- Masonry grid -->
+      <div class="masonry" id="worksGrid">
+
+        <!-- Work 01 -->
+        <article class="work-card fade-up" data-category="color"
+          data-title="Porsche Mission R"
+          data-media="Colored pencil"
+          data-size="A3"
+          data-year="2024"
+          data-age="9"
+          data-ep-en="Inspired by the Porsche Mission R concept car. I wanted to capture the red and white livery with as much detail as possible — the roll cage, the TAG Heuer decals, every vent."
+          data-ep-ja="ポルシェ・ミッションRのコンセプトカーをモチーフに制作。赤と白のカラーリングを忠実に再現したくて、ロールケージやTAG Heuerのデカール、エアベントの一つひとつを丁寧に描き込みました。">
+          <div class="work-img-wrap">
+            <img src="images/drawing_porsche_mission_r_new.jpg" alt="Porsche Mission R — colored pencil" loading="lazy" />
+            <button class="work-zoom" aria-label="View Porsche Mission R">
+              <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="work-meta">
+            <h3 class="work-title">Porsche Mission R</h3>
+            <ul class="work-specs" aria-label="Specifications">
+              <li><span class="spec-key" data-i18n="spec_media">Media</span><span class="spec-val">Colored pencil</span></li>
+              <li><span class="spec-key" data-i18n="spec_size">Size</span><span class="spec-val">A3</span></li>
+              <li><span class="spec-key" data-i18n="spec_year">Year</span><span class="spec-val">2024</span></li>
+              <li><span class="spec-key spec-age" data-i18n="spec_age">Age at creation</span><span class="spec-val spec-age-val">9</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Work 02 -->
+        <article class="work-card fade-up" data-category="pencil"
+          data-title="Lamborghini Veneno"
+          data-media="Pencil &amp; ink"
+          data-size="A3"
+          data-year="2024"
+          data-age="9"
+          data-ep-en="The Veneno's angular geometry is unlike any other car. I started with the front splitter and worked back — the hardest part was getting the headlight cluster to feel sharp without losing the depth."
+          data-ep-ja="ヴェネーノの鋭角的なフォルムは唯一無二。フロントスプリッターから描き始め、後方へと進めました。ヘッドライトのクラスターを、奥行きを失わずに鋭く表現するのが一番難しかったです。">
+          <div class="work-img-wrap">
+            <img src="images/drawing_lamborghini_veneno.jpg" alt="Lamborghini Veneno — pencil and ink" loading="lazy" />
+            <button class="work-zoom" aria-label="View Lamborghini Veneno">
+              <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="work-meta">
+            <h3 class="work-title">Lamborghini Veneno</h3>
+            <ul class="work-specs">
+              <li><span class="spec-key" data-i18n="spec_media">Media</span><span class="spec-val">Pencil &amp; ink</span></li>
+              <li><span class="spec-key" data-i18n="spec_size">Size</span><span class="spec-val">A3</span></li>
+              <li><span class="spec-key" data-i18n="spec_year">Year</span><span class="spec-val">2024</span></li>
+              <li><span class="spec-key spec-age" data-i18n="spec_age">Age at creation</span><span class="spec-val spec-age-val">9</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Work 03 -->
+        <article class="work-card fade-up" data-category="pencil"
+          data-title="Porsche 911 Sketch"
+          data-media="Pencil"
+          data-size="A4"
+          data-year="2024"
+          data-age="9"
+          data-ep-en="This was a gift for the staff at Porsche Center Tokyo. Drawing the 911's curves from memory, trying to get the stance exactly right."
+          data-ep-ja="ポルシェセンター東京のスタッフへのプレゼントとして描きました。911のカーブを記憶から描き起こし、スタンスを正確に再現しようとしました。">
+          <div class="work-img-wrap">
+            <img src="images/porsche_center_staff.jpg" alt="Porsche 911 sketch presented at Porsche Center Tokyo" loading="lazy" />
+            <button class="work-zoom" aria-label="View Porsche 911 sketch">
+              <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="work-meta">
+            <h3 class="work-title">Porsche 911 — Gift Sketch</h3>
+            <ul class="work-specs">
+              <li><span class="spec-key" data-i18n="spec_media">Media</span><span class="spec-val">Pencil</span></li>
+              <li><span class="spec-key" data-i18n="spec_size">Size</span><span class="spec-val">A4</span></li>
+              <li><span class="spec-key" data-i18n="spec_year">Year</span><span class="spec-val">2024</span></li>
+              <li><span class="spec-key spec-age" data-i18n="spec_age">Age at creation</span><span class="spec-val spec-age-val">9</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Work 04 -->
+        <article class="work-card fade-up" data-category="color"
+          data-title="Lamborghini Side Study"
+          data-media="Colored pencil &amp; ink"
+          data-size="A3"
+          data-year="2024"
+          data-age="9"
+          data-ep-en="A side-profile study exploring how light wraps around the Lamborghini's carbon body panels. The thin red stripe along the sill was added last, as a signature detail."
+          data-ep-ja="ランボルギーニのカーボンボディパネルへの光の当たり方を研究したサイドプロファイル作品。サイドシルに沿った細いレッドラインは、最後にシグネチャーとして加えました。">
+          <div class="work-img-wrap">
+            <img src="images/drawing_lamborghini.jpg" alt="Lamborghini side profile — colored pencil and ink" loading="lazy" />
+            <button class="work-zoom" aria-label="View Lamborghini side study">
+              <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="work-meta">
+            <h3 class="work-title">Lamborghini — Side Study</h3>
+            <ul class="work-specs">
+              <li><span class="spec-key" data-i18n="spec_media">Media</span><span class="spec-val">Colored pencil &amp; ink</span></li>
+              <li><span class="spec-key" data-i18n="spec_size">Size</span><span class="spec-val">A3</span></li>
+              <li><span class="spec-key" data-i18n="spec_year">Year</span><span class="spec-val">2024</span></li>
+              <li><span class="spec-key spec-age" data-i18n="spec_age">Age at creation</span><span class="spec-val spec-age-val">9</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Work 05 — placeholder -->
+        <article class="work-card work-card--placeholder fade-up" data-category="pencil" data-title="Coming Soon" data-media="—" data-size="—" data-year="2025" data-age="—" data-ep-en="New work in progress." data-ep-ja="制作中の新作です。">
+          <div class="work-img-wrap work-img-placeholder">
+            <div class="placeholder-inner"><span data-i18n="placeholder_new">New work<br>coming soon</span></div>
+          </div>
+          <div class="work-meta">
+            <h3 class="work-title">— In Progress</h3>
+            <ul class="work-specs">
+              <li><span class="spec-key" data-i18n="spec_year">Year</span><span class="spec-val">2025</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Work 06 — placeholder -->
+        <article class="work-card work-card--placeholder fade-up" data-category="color" data-title="Coming Soon" data-media="—" data-size="—" data-year="2025" data-age="—" data-ep-en="New work in progress." data-ep-ja="制作中の新作です。">
+          <div class="work-img-wrap work-img-placeholder">
+            <div class="placeholder-inner"><span data-i18n="placeholder_new">New work<br>coming soon</span></div>
+          </div>
+          <div class="work-meta">
+            <h3 class="work-title">— In Progress</h3>
+            <ul class="work-specs">
+              <li><span class="spec-key" data-i18n="spec_year">Year</span><span class="spec-val">2025</span></li>
+            </ul>
+          </div>
+        </article>
+
+      </div><!-- /masonry -->
+    </div>
+  </section>
+
+  <!-- ═══ RECOGNITION ═══ -->
+  <section id="recognition" class="section-pad section-dark" aria-labelledby="recog-heading">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label section-label--light" data-i18n="recog_label">Recognition</span>
+        <h2 id="recog-heading" class="section-title section-title--light" data-i18n="recog_title">Places &amp; Moments</h2>
+      </div>
+
+      <!-- Recognition logos bar -->
+      <div class="recog-bar fade-up" aria-label="Recognition">
+        <div class="recog-item">
+          <span class="recog-name">Porsche Center</span>
+          <span class="recog-sub">Tokyo, Japan</span>
+        </div>
+        <div class="recog-divider" aria-hidden="true"></div>
+        <div class="recog-item">
+          <span class="recog-name">TWENTYFIVE</span>
+          <span class="recog-sub">Classic Car Gallery</span>
+        </div>
+        <div class="recog-divider" aria-hidden="true"></div>
+        <div class="recog-item">
+          <span class="recog-name">Martini Porsche</span>
+          <span class="recog-sub">Heritage</span>
+        </div>
+      </div>
+
+      <!-- Stats — fixed counter -->
+      <div class="stats-row fade-up">
+        <div class="stat-block">
+          <span class="stat-num" data-target="30">30</span><span class="stat-unit">+</span>
+          <p class="stat-label" data-i18n="stat_works">Original Works</p>
+        </div>
+        <div class="stat-block">
+          <span class="stat-num" data-target="7">7</span>
+          <p class="stat-label" data-i18n="stat_started">Age started drawing cars</p>
+        </div>
+        <div class="stat-block">
+          <span class="stat-num" data-target="3">3</span>
+          <p class="stat-label" data-i18n="stat_showrooms">Showroom presentations</p>
+        </div>
+      </div>
+
+      <!-- Photos row -->
+      <div class="recog-photos fade-up">
+        <figure class="recog-photo">
+          <img src="images/porsche_center_staff.jpg" alt="YugenK at Porsche Center Tokyo" loading="lazy" />
+          <figcaption>Porsche Center Tokyo</figcaption>
+        </figure>
+        <figure class="recog-photo">
+          <img src="images/classic_car_gallery2.jpg" alt="YugenK at TWENTYFIVE classic car gallery" loading="lazy" />
+          <figcaption>TWENTYFIVE, Classic Car Gallery</figcaption>
+        </figure>
+        <figure class="recog-photo">
+          <img src="images/boy_porsche_taycan.jpg" alt="YugenK with Porsche Taycan" loading="lazy" />
+          <figcaption>Porsche Taycan — Showroom</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ THE ARTIST ═══ -->
+  <section id="artist" class="section-pad" aria-labelledby="artist-heading">
+    <div class="container">
+      <div class="artist-grid">
+        <div class="artist-photo-col fade-up">
+          <div class="artist-photo-main">
+            <img src="images/boy_porsche_taycan.jpg" alt="YugenK" loading="lazy" />
+          </div>
+        </div>
+        <div class="artist-text-col fade-up">
+          <span class="section-label" data-i18n="artist_label">The Artist</span>
+          <h2 id="artist-heading" class="section-title" data-i18n="artist_title">Why I Draw Cars</h2>
+
+          <blockquote class="artist-quote" lang="en" data-lang-show="en">
+            <p>"Supercars are the most extreme things humans design. Every vent, every angle exists for a reason — and I want to understand that by drawing it."</p>
+          </blockquote>
+          <blockquote class="artist-quote" lang="ja" data-lang-show="ja" hidden>
+            <p>「スーパーカーは人間が設計するもっとも極限的なもの。すべてのベント、すべてのアングルに理由がある。それを描くことで理解したいんです。」</p>
+          </blockquote>
+
+          <div class="artist-bio" data-lang-show="en">
+            <p>I started drawing Porsches and Lamborghinis at age 7. I use whatever reference I can find — photos, visits to showrooms, studying real cars up close.</p>
+            <p>My medium is mostly pencil and colored pencil on paper. I draw slowly, usually in one long session. Each car takes me between 3 and 10 hours.</p>
+          </div>
+          <div class="artist-bio" data-lang-show="ja" hidden>
+            <p>7歳のころからポルシェやランボルギーニを描き始めました。写真、ショールームへの訪問、実車の観察——使えるリファレンスは何でも使います。</p>
+            <p>画材は主に鉛筆と色鉛筆。一度座ったら長時間集中して描きます。1台につき3〜10時間かかります。</p>
+          </div>
+
+          <p class="artist-managed" data-i18n="artist_managed">
+            <i class="fas fa-shield-halved" aria-hidden="true"></i>
+            Managed by his parents · All commissions handled by family
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SUPPORT ═══ -->
+  <section id="support" class="section-pad section-paper" aria-labelledby="support-heading">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label" data-i18n="support_label">Support</span>
+        <h2 id="support-heading" class="section-title" data-i18n="support_title">Join the Journey</h2>
+        <p class="section-sub fade-up" data-i18n="support_sub">
+          You don't have to buy anything. Following along is the greatest support of all.
+        </p>
+        <p class="section-sub section-sub--ja fade-up" data-i18n="support_sub_ja">
+          購入しなくてもかまいません。見守っていただけるだけで、最大の応援です。
+        </p>
+      </div>
+
+      <div class="support-cards fade-up">
+
+        <div class="support-card">
+          <span class="support-num">01</span>
+          <h3 class="support-card-title" data-i18n="support_follow_title">Follow</h3>
+          <p class="support-card-body" data-i18n="support_follow_body">
+            Follow on Instagram to see new works as they're posted. Free, and the most direct way to support.
+          </p>
+          <p class="support-card-body--ja" data-i18n="support_follow_body_ja">
+            Instagramをフォローして、新作をリアルタイムでご覧ください。無料でできる一番の応援です。
+          </p>
+          <a href="https://www.instagram.com/yugenk_art/" target="_blank" rel="noopener noreferrer" class="support-card-btn" data-i18n="support_follow_btn">
+            Follow @yugenk_art
+          </a>
+        </div>
+
+        <div class="support-card">
+          <span class="support-num">02</span>
+          <h3 class="support-card-title" data-i18n="support_commission_title">Commission</h3>
+          <p class="support-card-body" data-i18n="support_commission_body">
+            Request an original drawing of your car or favourite model. Currently accepting a limited number of commissions. Typical turnaround: 4–8 weeks.
+          </p>
+          <p class="support-card-body--ja" data-i18n="support_commission_body_ja">
+            あなたのクルマや好きな車種のオリジナル作品を依頼できます。現在、限定数のみ受付中。納期目安：4〜8週間。
+          </p>
+          <a href="https://www.instagram.com/yugenk_art/" target="_blank" rel="noopener noreferrer" class="support-card-btn support-card-btn--outline" data-i18n="support_commission_btn">
+            Enquire via Instagram DM
+          </a>
+        </div>
+
+        <div class="support-card">
+          <span class="support-num">03</span>
+          <h3 class="support-card-title" data-i18n="support_prints_title">Prints &amp; Support</h3>
+          <p class="support-card-body" data-i18n="support_prints_body">
+            High-quality prints of selected works. Proceeds go directly toward art supplies, gallery visits, and future exhibitions.
+          </p>
+          <p class="support-card-body--ja" data-i18n="support_prints_body_ja">
+            選抜作品の高品質プリント販売。収益は画材・ギャラリー訪問・将来の展示活動に充てられます。
+          </p>
+          <a href="https://www.instagram.com/yugenk_art/" target="_blank" rel="noopener noreferrer" class="support-card-btn support-card-btn--outline" data-i18n="support_prints_btn">
+            Contact for Prints
+          </a>
+        </div>
+
+      </div>
+
+      <p class="support-note fade-up" data-i18n="support_note">
+        <i class="fas fa-circle-info" aria-hidden="true"></i>
+        All proceeds support art materials, showroom and gallery visits, and international exhibition travel. All communication managed by his parents.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ CONNECT ═══ -->
+  <section id="connect" class="section-pad section-dark" aria-labelledby="connect-heading">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label section-label--light" data-i18n="connect_label">Connect</span>
+        <h2 id="connect-heading" class="section-title section-title--light" data-i18n="connect_title">Get in Touch</h2>
+      </div>
+
+      <div class="connect-grid">
+        <!-- QR Code block -->
+        <div class="connect-qr fade-up">
+          <div id="qrcode" aria-label="QR code to follow YugenK on Instagram"></div>
+          <p class="qr-label" data-i18n="qr_scan">Scan to follow on Instagram</p>
+          <p class="qr-handle">@yugenk_art</p>
+        </div>
+
+        <!-- Contact buttons -->
+        <div class="connect-btns fade-up">
+          <a href="https://www.instagram.com/yugenk_art/" target="_blank" rel="noopener noreferrer" class="connect-btn connect-btn--ig">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+            <span>
+              <strong data-i18n="connect_ig_title">Instagram DM</strong>
+              <em data-i18n="connect_ig_sub">Fastest response</em>
+            </span>
+          </a>
+          <a href="mailto:yugenk.art@icloud.com" class="connect-btn connect-btn--mail">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span>
+              <strong data-i18n="connect_mail_title">Email</strong>
+              <em>yugenk.art@icloud.com</em>
+            </span>
+          </a>
+          <p class="connect-managed" data-i18n="connect_managed">
+            Managed by his parents · Replies within a few days
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">YugenK</span>
+      <p class="footer-copy">&copy; <span id="year"></span> YugenK. All artworks are original and protected by copyright.</p>
+      <a href="https://www.instagram.com/yugenk_art/" target="_blank" rel="noopener noreferrer" class="footer-ig" aria-label="Instagram">
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- ═══ LIGHTBOX ═══ -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Work viewer" hidden>
+    <div id="lb-backdrop"></div>
+    <div class="lb-wrap">
+      <button class="lb-close" id="lbClose" aria-label="Close"><i class="fas fa-xmark" aria-hidden="true"></i></button>
+      <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+      <button class="lb-nav lb-next" id="lbNext" aria-label="Next"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+      <div class="lb-inner">
+        <div class="lb-img-col">
+          <img id="lbImg" src="" alt="" />
+        </div>
+        <div class="lb-info-col">
+          <h3 id="lbTitle" class="lb-title"></h3>
+          <ul id="lbSpecs" class="lb-specs"></ul>
+          <p id="lbEp" class="lb-ep"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
